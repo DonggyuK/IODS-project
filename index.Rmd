@@ -1,5 +1,6 @@
 ---
 title: "IODS course project"
+author: "Donggyu Kam"
 output:
   html_document:
     theme: cosmo

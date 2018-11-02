@@ -1,0 +1,8 @@
+---
+output:
+  html_document:
+    df_print: paged
+---
+
+It's funny to deal with R studio even though some steps are confusing.
+[good!](https://donggyuK.github.io/IODS-project)
