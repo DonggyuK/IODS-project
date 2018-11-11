@@ -163,8 +163,15 @@ $(document).ready(function () {
 <ul>
 <li>Describe your work and results clearly.</li>
 <li>Assume the reader has an introductory course level understanding of writing and reading R code as well as statistical methods</li>
-<li>Assume the reader has no previous knowledge of your data or the more advanced methods you are using</li>
+<li>Assume the reader has no previous knowledge of your data or the more advanced methods you are using<br />
+students2014&lt;-read.table(“<a href="http://s3.amazonaws.com/assets.datacamp.com/production/course_2218/datasets/learning2014.txt" class="uri">http://s3.amazonaws.com/assets.datacamp.com/production/course_2218/datasets/learning2014.txt</a>”, sep=“,”, header=TRUE ) dim(students2014) str(students2014)</li>
 </ul>
+<p>the data “students2014” is about the students attitude toward statistics. And the data consists of information about student ages, attitude toward statistics, points from exam and the students’’ gender so it has 7 variables and 166 observations.</p>
+<p>library(GGally) library(ggplot2)</p>
+<p>pairs(students2014[-1], col=(students2014$gender)) p &lt;- ggpairs(students2014, mapping = aes(col=gender, alpha=0.3), lower = list(combo = wrap(“facethist”, bins = 20))) p</p>
+<p>model1&lt;-lm(points ~ attitude+stra+surf, data=students2014) summary(model1)</p>
+<p>model2&lt;-lm(points ~ attitude, data=students2014) summary(model2)</p>
+<p>par(mfrow=c(2,2)) plot(model2, which = c(1,2,5))</p>
 <hr />
 </div>
 
