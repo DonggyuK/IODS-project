@@ -2,7 +2,7 @@
 title: "chapter5"
 output: html_document
 ---
-
+##Chapter 5
 ###data
 ```{r}
 human<-read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2218/datasets/human2.txt", sep=',', header= TRUE)
@@ -95,7 +95,7 @@ str(tea_time)
 gather(tea_time)%>%ggplot(aes(value))+facet_wrap("key",scales="free")+geom_bar()
 ```
 
-##Multiple Corresondence Analysis
+###Multiple Corresondence Analysis
 ```{r}
 mca<-MCA(tea_time, graph=FALSE)
 ```
