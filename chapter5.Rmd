@@ -2,7 +2,7 @@
 title: "chapter5"
 output: html_document
 ---
-##Chapter 5
+#Chapter 5
 ###data
 ```{r}
 human<-read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2218/datasets/human2.txt", sep=',', header= TRUE)
